@@ -1,54 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Soma ❤️ Valentine</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I Love You Soma ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-body {
+body{
 margin:0;
-font-family:Arial;
-background:linear-gradient(135deg,#ff4e8a,#ff9a9e);
 height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
+background:linear-gradient(135deg,#ff4e8a,#ff9a9e);
+font-family:Arial;
 overflow:hidden;
 }
 
 .card{
 background:white;
-padding:25px;
+padding:30px;
 border-radius:20px;
 text-align:center;
-width:90%;
-max-width:400px;
 box-shadow:0px 10px 25px rgba(0,0,0,0.3);
-}
-
-button{
-width:100%;
-padding:12px;
-margin:8px 0;
-border:none;
-border-radius:25px;
-font-size:16px;
-cursor:pointer;
-}
-
-.yes1{background:#ff2f6e;color:white;}
-.yes2{background:#ff7aa8;color:white;}
-.yes3{background:#ffe3ec;color:#ff2f6e;font-weight:bold;}
-
-.music{
-position:fixed;
-top:15px;
-right:15px;
-background:white;
-padding:10px;
-border-radius:50%;
-cursor:pointer;
 }
 
 .heart{
@@ -65,79 +38,32 @@ animation:float 4s linear infinite;
 
 <body>
 
-<audio id="bgMusic" loop>
-<source src="song.mp3" type="audio/mpeg">
-</audio>
+<div class="card">
 
-<div class="music" onclick="playMusic()">🎵</div>
+<h2>YAYYYY SOMA 😭❤️</h2>
 
-<div class="card" id="box">
+<p style="font-size:17px;">
 
-<h2>Soma 💖</h2>
+✨ <b>Tu meri zindagi di sab ton sohni kahani ae</b> ✨<br>
+(You are the most beautiful story of my life) 🥹💖
 
-<p id="text">
-Hey beautiful 😍<br>
-Turn volume ON 🔊<br>
-I want to ask you something special...
+<br><br>
+
+From today onwards,<br>
+You are officially my Valentine 🌹<br><br>
+
+I promise to love you,<br>
+care for you,<br>
+stand by you,<br>
+and annoy you forever 😜❤️
+
 </p>
 
-<h3>Will you be my Valentine? 🌹</h3>
-
-<button class="yes1" onclick="next()">YES OF COURSE 😘</button>
-<button class="yes2" onclick="next()">OBVIOUSLY YES 🥹</button>
-<button class="yes3" onclick="next()">CLICK HERE LOVE 💌</button>
+<h3>I LOVE YOU SO MUCH 💕</h3>
 
 </div>
 
 <script>
-
-const music=document.getElementById("bgMusic");
-
-function playMusic(){
-music.play();
-}
-
-document.body.addEventListener("click",()=>{
-music.play();
-},{once:true});
-
-const lines=[
-"Soma tu meri favorite feeling ae ❤️",
-"Tu meri zindagi di sab ton sohni kahani ae 🥹💕",
-"You + Me = Forever 💍",
-"My dil already belongs to you 😍"
-];
-
-let i=0;
-
-function next(){
-document.getElementById("text").innerHTML=lines[i];
-i++;
-
-if(i==lines.length){
-document.getElementById("box").innerHTML=`
-<h2>YAYYYY SOMA 😭❤️</h2>
-<p>
-You made my heart dance like Bollywood movie 🎬💃<br><br>
-Tu meri jaan ae 💕<br>
-Main hamesha tera saath dunga 😘
-</p>
-<h3>I LOVE YOU 💖</h3>
-`;
-}
-}
-
 setInterval(()=>{
 let h=document.createElement("div");
 h.innerHTML="❤️";
-h.className="heart";
-h.style.left=Math.random()*100+"vw";
-h.style.fontSize=(15+Math.random()*20)+"px";
-document.body.appendChild(h);
-setTimeout(()=>{h.remove()},4000);
-},300);
-
-</script>
-
-</body>
-</html>
